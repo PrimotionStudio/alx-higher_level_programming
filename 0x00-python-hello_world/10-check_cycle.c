@@ -7,6 +7,7 @@
   * @list: The list checked
   * Return: 1, 0 or -1
   */
+/*
 int check_cycle(listint_t *list)
 {
 	listint_t *fast = NULL, *slow = NULL;
@@ -36,4 +37,10 @@ int check_cycle(listint_t *list)
 	free(fast);
 	free(slow);
 	return (0);
+}*/
+int checklist(listint_t *mainlist, listint_t *list, int pos)
+{
+	while (list != NULL)
+	{
+
 }
