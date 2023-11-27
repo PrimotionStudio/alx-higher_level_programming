@@ -1,0 +1,6 @@
+#!/bin/bash
+python3 -m py_compile "$PYFILE"
+file=$(basename "$PYFILE")
+pyfile="${file%.*}"
+mv "./__pycache__/${pyfile}."* "${pyfile}.pyc"
+rm -rf __pycache__
