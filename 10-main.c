@@ -14,6 +14,7 @@ int main(void)
 	listint_t *current;
 	listint_t *temp;
 	int i;
+
 	head = NULL;
 	add_nodeint(&head, 0);
 	add_nodeint(&head, 1);

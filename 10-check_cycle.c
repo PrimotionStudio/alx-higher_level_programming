@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "lists.h"
 
+/**
+  * check_cycle - Used to check if there is a cycle
+  * @list: The list checked
+  * Return: 1, 0 or -1
+  */
 int check_cycle(listint_t *list)
 {
 	listint_t *fast = NULL, *slow = NULL;
