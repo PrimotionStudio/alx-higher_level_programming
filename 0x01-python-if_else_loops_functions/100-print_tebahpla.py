@@ -7,5 +7,5 @@ while (i >= 65):
     else:
         i -= 32
     flag += 1
-    print(chr(i), end="")
+    print("{}".format(chr(i)), end="")
     i -= 1
