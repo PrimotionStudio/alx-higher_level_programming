@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-print(__import__("string").ascii_uppercase)
-print()
+from string import ascii_uppercase
+print(ascii_uppercase)
