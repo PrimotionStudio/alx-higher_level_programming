@@ -19,5 +19,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
     elif (len(tuple_b) == 2):
         c = tuple_b[0]
         d = tuple_b[1]
-    new = [a + c, b + d]
+    new = [int(a) + int(c), int(b) + int(d)]
     return (tuple(new))
