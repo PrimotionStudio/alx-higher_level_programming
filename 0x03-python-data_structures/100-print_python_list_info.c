@@ -4,7 +4,8 @@
   * print_python_list_info - Used to get py info
   * @p: python object
   */
-void print_python_list_info(PyObject *p) {
+void print_python_list_info(PyObject *p)
+{
 	int i = 0, size;
 	PyObject *item;
 
