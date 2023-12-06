@@ -7,5 +7,5 @@ def square_matrix_simple(matrix=[]):
             new[-1].append(j)
     for i in range(len(new)):
         for j in range(len(new[i])):
-            new[i][j] = new[i][j]  ** 2
+            new[i][j] = new[i][j] ** 2
     return (new)
