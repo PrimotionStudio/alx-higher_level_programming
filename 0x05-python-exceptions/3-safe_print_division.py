@@ -2,7 +2,7 @@
 def safe_print_division(a, b):
     try:
         sum = a / b
-    except:
+    except (TypeError, ZeroDivisionError):
         sum = None
     finally:
         print("Inside result: {}".format(sum))
