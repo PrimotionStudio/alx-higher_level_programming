@@ -38,7 +38,8 @@ class Square:
         try:
             a, b = position
             if int(a) < 0 or int(b) < 0:
-                raise ValueError("position must be a tuple of 2 positive integers")
+                raise ValueError("position \
+                    must be a tuple of 2 positive integers")
             self.__position = (a, b)
         except (TypeError, ValueError):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -60,7 +61,8 @@ class Square:
         try:
             a, b = value
             if int(a) < 0 or int(b) < 0:
-                raise ValueError("position must be a tuple of 2 positive integers")
+                raise ValueError("position must \
+                    be a tuple of 2 positive integers")
             self.__position = (a, b)
         except (TypeError, ValueError):
             raise TypeError("position must be a tuple of 2 positive integers")

@@ -4,7 +4,7 @@
 
 class Square:
     """Represents a square with a specified size.
-    
+
     Attributes:
     - __size (int): The size of each side of the square.
     Methods:
