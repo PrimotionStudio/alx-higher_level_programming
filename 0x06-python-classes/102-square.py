@@ -51,6 +51,7 @@ class Square:
             self.__size = int(value)
         except TypeError:
             raise TypeError("size must be an integer")
+
     def __eq__(self, square):
         """Checks if the area of the current square is
         equal to the area of another square.
