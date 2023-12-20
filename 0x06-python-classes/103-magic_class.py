@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """The File contais a class `MagicClass`."""
 
 
