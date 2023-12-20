@@ -112,3 +112,12 @@ class Square:
             for j in range(self.__size):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Prints a visual representation of
+        the square using '#' characters,
+        respecting its position.
+        If the size is 0, it prints an empty line.
+        """
+        self.my_print()
+        return ""
