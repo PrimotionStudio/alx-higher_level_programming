@@ -119,5 +119,17 @@ class Square:
         respecting its position.
         If the size is 0, it prints an empty line.
         """
-        self.my_print()
-        return ""
+        ret = ''
+        if self.__size != 0:
+            a = self.position
+            for m in range(a[1]):
+                ret += '\n'
+        for i in range(self.__size):
+            a = self.position
+            for k in range(a[0]):
+                ret += " "
+            for j in range(self.__size):
+                ret += "#"
+            if (i != (self.__size - 1)):
+                ret += '\n'
+        return ret
