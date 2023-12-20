@@ -1,8 +1,11 @@
 """Initializes a MagicClass object with a given radius."""
+
+
 import math
 
 
 class MagicClass:
+    """Initializes a MagicClass object with a given radius."""
     def __init__(self, radius):
         """Initializes a MagicClass object with a given radius.
         """
