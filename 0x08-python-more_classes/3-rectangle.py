@@ -77,3 +77,23 @@ class Rectangle:
         Returns the perimiter of the class
         """
         return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        """
+        returns a string repr of for print()
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        rect = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rect += "#"
+            if i != (self.__height - 1):
+                rect += '\n'
+        return rect
+
+    def __repr__(self):
+        """
+        Returns a string representation of the rect for eval()
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
