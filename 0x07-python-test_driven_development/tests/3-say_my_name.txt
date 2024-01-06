@@ -1,0 +1,24 @@
+Test Functions for 3-say_my_name.txt
+
+>>> say = __import__('3-say_my_name').say_my_name
+>>> say("Prime", "Boss")
+My name is Prime Boss
+>>> say("Prime", )
+My name is Prime 
+>>> say(11, "Boss")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+>>> say(11)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+>>> say("")
+My name is  
+>>> say()
+Traceback (most recent call last):
+	...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>> say("", "")
+My name is  
+>>> 

@@ -1,0 +1,24 @@
+Test Functionalities for 0-add_integer.py
+
+>>> add = __import__('0-add_integer').add_integer
+>>> add(1,3)
+4
+>>> add(5,)
+103
+>>> a = 4
+>>> add(a,)
+102
+>>> add(a,7)
+11
+>>> add([],[])
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+>>> add([7],[])
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+>>> add(a,[])
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer

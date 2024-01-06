@@ -1,0 +1,26 @@
+Text functions for 5-text_indentation.py
+
+>>> txt = __import__('5-text_indentation').text_indentation
+>>> a = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?"
+>>> txt(a)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quonam modo?
+
+Utrum igitur tibi litteram videor an totas paginas commovere?
+
+>>> a = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+... Quonam modo                ?                             Utrum igitur tibi litteram videor an totas paginas commovere?"
+>>> txt(a)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quonam modo                ?
+
+Utrum igitur tibi litteram videor an totas paginas commovere?
+
+>>> a = ["Hello World"]
+>>> txt(a)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> 

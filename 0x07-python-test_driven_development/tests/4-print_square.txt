@@ -1,0 +1,32 @@
+Test Functions for 4-print_squares.txt
+
+>>> square = __import__('4-print_square').print_square
+>>> square(1)
+#
+>>> square(2)
+##
+##
+>>> square(9)
+#########
+#########
+#########
+#########
+#########
+#########
+#########
+#########
+#########
+>>> square("Hey")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+>>> square(0)
+>>> square(-5)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+>>> square([])
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+>>>
