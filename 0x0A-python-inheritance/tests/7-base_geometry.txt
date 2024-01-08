@@ -1,0 +1,24 @@
+Test Cases for 7-base_geometry.py
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> 
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+>>> bg.integer_validator("my_name", "Prime")
+Traceback (most recent call last):
+	...
+TypeError: my_name must be an integer
+>>> bg.integer_validator("my_age", -90)
+Traceback (most recent call last):
+	...
+ValueError: my_age must be greater than 0
+>>> bg.integer_validator("my_score", 0)
+Traceback (most recent call last):
+	...
+ValueError: my_score must be greater than 0
+>>> bg.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
+>>> 
