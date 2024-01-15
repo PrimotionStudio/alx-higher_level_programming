@@ -58,3 +58,20 @@ class Base:
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Im bored and outta ideas
+        """
+
+        if cls.__name__ == "Rectangle":
+            dum = cls(1, 1)
+        else:
+            dum = cls(1)
+        dum.update(**dictionary)
+        return dum
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        pass
