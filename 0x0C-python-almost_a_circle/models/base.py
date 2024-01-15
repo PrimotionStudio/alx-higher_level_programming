@@ -93,15 +93,18 @@ class Base:
         i jsut wanna sleep
         """
 
-        """
         with open(cls.__name__ + ".csv", "w") as f:
-            if list_objs is None:
+            if list_objs is None or list_objs == []:
                 f.write("")
             else:
-                if cls.__name__ == "Rectangle"
-                f.write(Base.to_json_string([i.to_dictionary() for i in list_objs]))
-        """
-        pass
+                for i in list_objs:
+                    dt = i.to_dictionary()
+                    if i.__class__.__name__ == "Rectangle":
+                        f.write("{},{},{},{},{}\n".format(dt["id"],
+                                                        dt["width"], dt["height"], dt["x"], dt["y"]))
+                    elif i.__class__.__name__ == "Square":
+                        f.write("{},{},{},{}\n".format(dt["id"],
+                                                     dt["size"], dt["x"], dt["y"]))
 
     @classmethod
     def load_from_file_csv(cls):
@@ -109,7 +112,23 @@ class Base:
         Never mind
         """
 
-        pass
+        list_objs = []
+        with open(cls.__name__ + ".csv", "r") as f:
+            csv = f.readlines()
+            for i in csv:
+                lt = i[:-1].split(',')
+                if len(lt) == 5:
+                    dt = dict()
+                    lst = ['id', 'width', 'height', 'x', 'y']
+                    for j in range(len(lt)):
+                        dt[lst[j]] = lt[j]
+                elif len(lt) == 4:
+                    dt = dict()
+                    lst = ['id', 'size', 'x', 'y']
+                    for j in range(len(lt)):
+                        dt[lst[j]] = lt[j]
+                list_objs.append(cls.create(**dt))
+        return list_objs
 
     @staticmethod
     def draw(list_rectangles, list_squares):
