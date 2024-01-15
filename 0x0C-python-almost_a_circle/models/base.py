@@ -73,5 +73,28 @@ class Base:
         return dum
 
     @classmethod
+    def load_from_file(cls):
+        """
+        I give zero f**k
+        """
+
+        try:
+            with open(cls.__name__ + ".json", "r") as f:
+                list_attr = Base.from_json_string(f.read())
+                return [cls.create(**i) for i in list_attr]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
     def save_to_file_csv(cls, list_objs):
-        pass
+        """
+        This is the most tough opart
+        i jsut wanna sleep
+        """
+
+        with open(cls.__name__ + ".csv", "w") as f:
+            if list_objs is None:
+                f.write("")
+            else:
+                if cls.__name__ == "Rectangle"
+                f.write(Base.to_json_string([i.to_dictionary() for i in list_objs]))
