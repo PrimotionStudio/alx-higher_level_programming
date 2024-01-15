@@ -118,16 +118,12 @@ class Base:
             for i in csv:
                 lt = i[:-1].split(',')
                 if len(lt) == 5:
-                    dt = dict()
-                    lst = ['id', 'width', 'height', 'x', 'y']
-                    for j in range(len(lt)):
-                        dt[lst[j]] = lt[j]
+                    obj = cls(int(lt[0]),
+                                        int(lt[1]), int(lt[2]), int(lt[3]), int(lt[4]))
                 elif len(lt) == 4:
-                    dt = dict()
-                    lst = ['id', 'size', 'x', 'y']
-                    for j in range(len(lt)):
-                        dt[lst[j]] = lt[j]
-                list_objs.append(cls.create(**dt))
+                    obj = cls(int(lt[0]),
+                                        int(lt[1]), int(lt[2]), int(lt[3]))
+                list_objs.append(obj)
         return list_objs
 
     @staticmethod
