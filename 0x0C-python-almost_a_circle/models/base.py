@@ -5,6 +5,7 @@ called Base
 by Martins Okanlawon
 """
 import json
+import turtle
 
 
 class Base:
@@ -92,9 +93,51 @@ class Base:
         i jsut wanna sleep
         """
 
+        """
         with open(cls.__name__ + ".csv", "w") as f:
             if list_objs is None:
                 f.write("")
             else:
                 if cls.__name__ == "Rectangle"
                 f.write(Base.to_json_string([i.to_dictionary() for i in list_objs]))
+        """
+        pass
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Never mind
+        """
+
+        pass
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        The turtule drawing GUI
+        """
+
+        turtle.speed(1)
+        turtle.shape("turtle")
+
+        for r in list_rectangles:
+            turtle.penup()
+            turtle.goto(r.x, r.y)
+            turtle.pendown()
+            turtle.color("red")
+            for _ in range(2):
+                turtle.forward(r.width)
+                turtle.left(90)
+                turtle.forward(r.height)
+                turtle.left(90)
+
+        for s in list_squares:
+            turtle.penup()
+            turtle.goto(s.x, s.y)
+            turtle.pendown()
+            turtle.color("green")
+            for _ in range(4):
+                turtle.forward(s.size)
+                turtle.left(90)
+
+        turtle.done()
