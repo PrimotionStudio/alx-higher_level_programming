@@ -2,7 +2,7 @@
 module.exports = class Square extends require('./5-square') {
   charPrint (c) {
     if (c === undefined) {
-      this.print();
+      super.print();
     } else {
       let i = 0;
       while (i < this.height) {
