@@ -3,10 +3,11 @@ const { argv } = require('node:process');
 if (argv.length <= 3) {
   console.log(0);
 } else if (argv.length === 4) {
-  if (parseInt(argv[2]) > (parseInt(argv[3])))
+  if (parseInt(argv[2]) > (parseInt(argv[3]))) {
     console.log(argv[3]);
-  else
+  } else {
     console.log(argv[2]);
+  }
 } else {
   let i = 2;
   let max = parseInt(argv[i]);
