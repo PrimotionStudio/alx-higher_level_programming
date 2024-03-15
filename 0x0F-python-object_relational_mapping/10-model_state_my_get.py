@@ -17,9 +17,9 @@ if __name__ == "__main__":
     query = session.query(State)
     for state in query:
         if state.name == sys.argv[4]:
-	    print("{}".format(state.id))
-	    break
-    print(query)
+            print("{}".format(state.id))
+            break
+    print(state)
     row = query.all()
     if (row is not None):
         print("{}".format(row.id))
