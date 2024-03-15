@@ -12,7 +12,7 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name FROM states\
                 INNER JOIN cities ON cities.state_id = states.id\
                 WHERE states.name=%s\
-                ORDER BY cities.id", argv[4])
+                ORDER BY cities.id", (argv[4], ))
     rows = cur.fetchall()
     for row in rows:
         print(row)
