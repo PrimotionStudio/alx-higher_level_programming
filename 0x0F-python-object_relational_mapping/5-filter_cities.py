@@ -15,4 +15,4 @@ if __name__ == "__main__":
                 ORDER BY cities.id", (argv[4], ))
     rows = cur.fetchall()
     for row in rows:
-        print(row[0], end="")
+        print(row[0], start=", " end="")
