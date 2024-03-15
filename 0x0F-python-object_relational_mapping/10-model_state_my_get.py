@@ -17,6 +17,6 @@ if __name__ == "__main__":
     query = session.query(State).filter(State.name == sys.argv[4])
     row = query.one()
     if (row is not None):
-        print("{}: {}".format(row.id, row.name))
+        print("{}".format(row.id))
     else:
         print("Nothing")
