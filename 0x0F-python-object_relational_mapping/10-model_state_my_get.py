@@ -20,8 +20,3 @@ if __name__ == "__main__":
             print("{}".format(state.id))
             break
     print(state)
-    row = query.all()
-    if (row is not None):
-        print("{}".format(row.id))
-    else:
-        print("Not found")
