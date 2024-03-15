@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if (row is not None):
         print("{}".format(row.id))
     else:
-        print("Nothing")
+        print("Not found")
