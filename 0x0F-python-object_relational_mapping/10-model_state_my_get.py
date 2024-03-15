@@ -14,7 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).filter(State.name == sys.argv[4])
+    query = session.query(State).filter(State.name.like(sys.argv[4]))
     row = query.one()
     if (row is not None):
         print("{}".format(row.id))
