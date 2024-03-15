@@ -15,7 +15,7 @@ if __name__ == "__main__":
     session = Session()
 
     query = session.query(State).filter(State.name.like(sys.argv[4]))
-    row = query.one()
+    row = query.all()
     if (row is not None):
         print("{}".format(row.id))
     else:
