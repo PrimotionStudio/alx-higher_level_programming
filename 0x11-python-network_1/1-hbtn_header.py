@@ -7,4 +7,4 @@ from urllib import request
 
 
 with request.urlopen(argv[1]) as response:
-    print(response)
+    print(response.headers.get('X-Request-Id'))
