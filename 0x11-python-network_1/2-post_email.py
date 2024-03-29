@@ -2,7 +2,7 @@
 """ython script that takes in a UR
 """
 from sys import argv
-from urlib import request, parse
+from urllib import request, parse
 
 
 if __name__ == "__main__":
