@@ -3,10 +3,9 @@
 1-hbtn_header.py
 , sends a request to the URL and displays the
 """
-from sys import argv
-from urllib import request
+import sys
+import urllib.request
 
 
-req = request.Request(argv[1])
-with request.urlopen(req) as response:
-    print(dict(response.headers).get('X-Request-Id'))
+with urllib.request.urlopen(sys.argv[1]) as response:
+    print(response.headers.get('X-Request-Id'))
