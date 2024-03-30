@@ -7,9 +7,9 @@ import requests
 
 
 if __name__ == "__main__":
-    payload = {'q': argv[1]}
-    res = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
+        payload = {'q': argv[1]}
+        res = requests.post("http://0.0.0.0:5000/search_user", data=payload)
         obj = res.json()
         if obj:
             print("[{}] {}".format(obj['id'], obj['name']))
@@ -17,3 +17,5 @@ if __name__ == "__main__":
             print("No result")
     except ValueError:
         print("Not a valid JSON")
+    except IndexError:
+        pass
