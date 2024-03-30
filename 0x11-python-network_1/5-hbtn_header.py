@@ -8,4 +8,5 @@ import requests
 
 if __name__ == "__main__":
     req = requests.get(argv[1])
-    print(str(req.__dict__['headers']['X-Request-Id']))
+    if 'X-Request-Id' in req.__dict__['headers']:
+        print(str(req.__dict__['headers']['X-Request-Id']))
