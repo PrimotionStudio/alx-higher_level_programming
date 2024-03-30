@@ -4,14 +4,13 @@
 """
 from sys import argv
 import requests
-import json
 
 
 if __name__ == "__main__":
     payload = {'q': argv[1]}
     res = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        obj = json.loads(res.text)
+        obj = res.json()
         if obj:
             print("[{}] {}".format(obj['id'], obj['name']))
         else:
