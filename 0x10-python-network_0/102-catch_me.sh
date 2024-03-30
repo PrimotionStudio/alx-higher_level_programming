@@ -1,2 +1,2 @@
 #!/bin/bash
-curl -s -X PUT -d "user_id=98" $1
+curl -s $1 | sed "s/*/You got me!/"
