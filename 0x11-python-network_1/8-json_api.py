@@ -4,9 +4,17 @@
 """
 from sys import argv
 import requests
+import json
 
 
 if __name__ == "__main__":
-    payload = {'q': argv[2]}
-    res = requests.post(argv[1], data=payload)
-    print(res.text)
+    payload = {'q': argv[1]}
+    res = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    try:
+        obj = json.loads(res.text)
+        if obj:
+            print("[{}] {}".format(obj['id'], obj['name']))
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
