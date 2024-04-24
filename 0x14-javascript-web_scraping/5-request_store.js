@@ -7,8 +7,8 @@ const file = process.argv[3];
 request.get(url, (err, data, html) => {
   if (err) console.error(err);
   else {
-    fs.writeFile(file, html, {encoding: 'utf-8'}, (err) => {
-    	// console.error(err);
+    fs.writeFile(file, html, { encoding: 'utf-8' }, (err) => {
+    	process.exit();
     });
   }
 });
